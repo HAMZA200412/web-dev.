@@ -14,14 +14,21 @@
     </style>
   </head>
   <body>
+    <img class="img-fluid" id="banner" src ="https://4c0625b0-cb51-465f-8f68-dce43ece66e2-00-1g254zo4231ev.picard.replit.dev/static/stream.jpg" height="320">
+    {% include 'nave.html'%}
     <div class="container" >
-        <h1 class="text-center">list of my projects</h1>
-        <img class="img-fluid" id="banner" src ="https://4c0625b0-cb51-465f-8f68-dce43ece66e2-00-1g254zo4231ev.picard.replit.dev/static/stream.jpg" height="320">
-
       <h2 class="text-center">About hamza </h2>
-      <p class="lead">
+      <div class="row">
+        <div class="col-6">
+        <p class="lead">
         Je suis un étudiant passionné par la data science et l'intelligence artificielle, avec une forte motivation pour exploiter le potentiel des données pour résoudre des problèmes complexes. Mon parcours académique en mathématiques appliquées et en informatique m'a permis de développer une solide compréhension des algorithmes de machine learning et des techniques de traitement des données. J'ai réalisé plusieurs projets pratiques où j'ai appliqué mes compétences en analyse de données, en programmation Python, et en utilisation de bibliothèques comme TensorFlow et Scikit-learn. Je suis constamment à la recherche de nouvelles opportunités pour approfondir mes connaissances et contribuer à des projets innovants qui ont un impact tangible.
-      </p>
+        </p>
+        </div>
+        <div class="col-6">
+        <img src="/static/smart.jpg" style="height:320px;">
+        </div>  
+      </div >
+    
       <h2 class="text-center">Job Opening</h2>
       <div>
         {% for job in jobs %}
@@ -29,11 +36,9 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">contact-me</button>
-        <p class="mt-4">by-the goat Hamza</p>
-      
+        <a href="mailto:hamzaamoussa28@gmail.com?subject=contact%20me" class="btn btn-primary btn-lg">contact-me</a>   
       </div>
-    
     </div>
+    {% include 'footer.html'%}
   </body>
 </html>
